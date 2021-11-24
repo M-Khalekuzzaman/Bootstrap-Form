@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS4 Form</title>
+
+      <!-- bootstrap css cdn link -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">   
+         <style>
+          .hr-style{
+            border: white dotted;
+              border-bottom: none;
+              width: 80px;
+          }
+          .btn{
+              transition: 0.2s;
+          }
+          .btn:hover{
+              transform: scale(0.8rem);
+              background-color: teal;
+
+          }
+          .form-group label{
+              font-weight: bold;
+              margin-bottom: 0%;
+          }
+          
+     
+  
+      </style>
+    
+
+</head>
+<body>
+    <!-- form section starts here -->
+    <section class="form bg-info px-2 py-4">
+        <div class="section-title">
+
+            <h3 class="text-center text-white font-weight-bolder">Form</h3>
+            <hr class="hr-style" >
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form action="mailto:khalekuzzaman158@outlook.com"  method="post" enctype="text/plain" class="was-validated">
+
+                <div class="form-group">
+                    <label for="fullname">Full-Name:</label>
+                    <input type="text" class="form-control" name="Full-name" required>
+                    <div class="valid-feedback text-white">Valid</div>
+                    <div class="invalid-feedback text-white">Enter your full name befor submitting the form</div>
+
+
+                </div>
+                <div class="form-group">
+                    <label for="username">User-Name:</label>
+                    <input type="text" class="form-control" name="User-name" required>
+                    <div class="valid-feedback text-white">Valid</div>
+                    <div class="invalid-feedback text-white">Enter your user name befor submitting the form</div>
+                    
+
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="form-control" name="E-mail" required>
+                    
+
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="pass1" placeholder="Enter your password" class="form-control" required>
+
+
+                </div>
+                <div class="form-group">
+                    <label for="password">Confirm-Password:</label>
+                    <input type="password" id="pass2" placeholder="ReEnter your password" class="form-control" required>
+
+
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                   <textarea style="resize: none;"  class="form-control" name="Message" id="message" cols="30" rows="4" required></textarea>
+
+                </div>
+                
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                    <label class="custom-control-label text-white mb-2" for="customSwitch1">off/on</label>
+                  </div>
+
+                <div class="form-group text-center ">
+                   <input type="submit" class="btn btn-danger mr-3 font-weight-bolder"  value="Submit" id="submit">
+                   <input type="reset" class="btn btn-danger font-weight-bolder" value="Reset">
+
+                </div>
+                
+            </form>
+            </div>
+
+        </div>
+
+
+
+
+
+    </section>
+    <script>
+        $("#submit").click(function(){
+
+            var password1 = $("#pass1").val();
+            var password2 = $("#pass2").val();
+            if(password1!="" && password2!="")
+            {
+                if(password1 == password2){
+                    alert("Successfully Set Pass-word")
+                }else{
+                    alert("Try Again Pass-word")
+                }
+
+
+            }else{
+                alert("Please Enter Password")
+            }
+
+
+        })
+    </script>
+
+
+
+
+    
+
+       <!-- form section ends here -->
+
+
+
+         <!-- css,bootstrap,javascript cdn link -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
